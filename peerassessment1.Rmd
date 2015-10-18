@@ -1,0 +1,30 @@
+---
+title: "peerassesment1"
+author: "muntaser syed"
+date: "October 18, 2015"
+output: html_document
+---
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+# peer assessment 1
+
+## getting cleaning and transforming data
+
+```{r}
+dat <- read.csv("activity.csv")
+datv <- as.Date(dat$date)
+dayofweek <- weekdays(datv)
+dat$date2 <- datv
+dat$dayofweek <- dayofweek
+listofdays <- split(dat, dat$date)
+
+```
+
+Now some more stuff:
+
+```{r, echo=TRUE}
+
+```
+
+
