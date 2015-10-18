@@ -11,20 +11,49 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 ## getting cleaning and transforming data
 
-```{r}
+```{r, echo =TRUE}
+setwd("~/learning/coursera-datascience/course5/assignment1")
+
 dat <- read.csv("activity.csv")
 datv <- as.Date(dat$date)
 dayofweek <- weekdays(datv)
 dat$date2 <- datv
 dat$dayofweek <- dayofweek
 listofdays <- split(dat, dat$date)
+listofstepsbyday <- lapply(listofdays, `[`, 1)
 
 ```
 
 Now some more stuff:
 
 ```{r, echo=TRUE}
+sumofsteps <- sapply(listofstepsbyday,sum, na.rm =TRUE)
+hist(sumofsteps)
+mean(sumofsteps)
+median(sumofsteps)
+
+dat$levels <- as.factor(dat$interval)
+stepsbyinterval <- split(dat, dat$levels)
+listofstepsbyinterval <- lapply(stepsbyinterval, `[`, 1)
+sumoflistofsteps <- sapply(listofstepsbyinterval,sum, na.rm =TRUE)
+intervals <- unique(dat$interval)
+averagelistofsteps <- sumoflistofsteps/61.0
+plot(averagelistofsteps, intervals, type = "l")
+which.max(averagelistofsteps)
 
 ```
+
+So, on average, the maximum number of steps taken are usually sometime in
+the morning, at about 835 am
+
+```{r, echo=TRUE}
+
+
+
+
+```
+
+Thats all, folks!!
+
 
 
