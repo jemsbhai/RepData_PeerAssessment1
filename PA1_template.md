@@ -171,7 +171,7 @@ title(main = "WEEKENDS")
 
 ![](PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
 
-So, as we can see from the graphs, the weekend steps seem to be more evenly distrubuted throughout the day.
+So, as we can see from the graphs, the weekend steps seem to be more evenly distributed throughout the day.
 
 Thats all, folks!!
 

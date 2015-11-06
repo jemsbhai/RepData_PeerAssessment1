@@ -119,7 +119,7 @@ title(main = "WEEKENDS")
 
 ```
 
-So, as we can see from the graphs, the weekend steps seem to be more evenly distrubuted throughout the day.
+So, as we can see from the graphs, the weekend steps seem to be more evenly distributed throughout the day.
 
 Thats all, folks!!
 
